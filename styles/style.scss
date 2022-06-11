@@ -1,0 +1,545 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800&display=swap');
+
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box; 
+    
+}
+
+
+
+:root {
+    --color-primary: #00bcd4 ;
+    --color-secondary:#a2a2a2  ;
+    --color-extra: #3f51b5 ;
+    --color-last: #fff;
+  }  
+
+
+/*Text Styling*/
+@mixin text-center {
+    text-align: center;
+}
+@mixin text-xl {
+    font-size: 2.0625rem;
+}
+
+@mixin text-lg {
+    font-size: 1.3125rem;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 400;
+}
+@mixin text-md {
+    font-size: 1.1rem;
+    font-weight: 400!important;
+}
+
+@mixin text-sm {
+    font-size: .88rem;
+    letter-spacing: 1px;
+}
+
+/*grid style*/
+.grid-col-2 {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 2rem;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.grid-reversed :first-child {
+  order: 2;
+}
+
+/*pad*/
+
+@mixin pad-1{
+  padding: 5rem 0;
+}
+
+
+@mixin pad-2 {
+  padding: .5rem 0;
+}
+
+@mixin auto{
+  margin: auto;
+  width: 1000px;
+}
+
+  
+body {
+    font-family: 'Montserrat', sans-serif;
+    line-height: 1.4;
+    color: #595959;
+    background-color:#f8f8f8 ;
+
+   
+}
+
+a {
+    color: #fff;
+    text-decoration: none;
+}
+    
+    ul {
+    list-style: none;
+}
+
+/* nav bar*/
+.navbar {
+
+    display: flex;
+    position: relative;
+    justify-content: space-between;
+    align-items: center;
+    margin: 1rem 4rem;
+    max-width: 60rem;
+    margin: 0 auto;
+    padding: 2rem 0;  
+    background-color: var(--color-last);
+ border-bottom: 595959 solid 1px ;
+}
+
+.brand-title {
+    
+    font-size: 1.5rem;
+    margin: .5rem;
+  font-weight: 900
+}
+
+.navbar-links {
+    height: 100%;
+}
+
+.navbar-links ul {
+    display: flex;
+    margin: 0;
+    padding: 0;
+    align-items: center;
+    @include text-sm;
+}
+
+.navbar-links li {
+    list-style: none;
+}
+
+.navbar-links li a {
+    display: block;
+    text-decoration: none;
+    padding: 1rem;
+    color:#595959;;
+    text-transform: uppercase;
+
+}
+
+.navbar-links a:hover {
+    background-color: var(--color-secondary);
+  
+}
+
+.toggle-button {
+    position: absolute;
+    top: .75rem;
+    right: 1rem;
+    display: none;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 30px;
+    height: 21px;
+}
+
+.toggle-button .bar {
+    height: 3px;
+    width: 100%;
+    background-color: #000;
+    border-radius: 10px;
+}
+
+
+
+
+
+
+
+
+/* nav2 */
+.grid-container-one{
+   border-top: #e7e7e7 solid 1px;
+   margin: auto;
+   width: 70rem;
+  }
+  
+  .grid-main {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+    justify-items: center;
+  }
+ 
+  .grid-one{
+     height: 4.5rem;
+     width: 17rem;
+     display: flex;
+    align-items: center;
+    
+  }
+  
+  .grid-one i{
+     font-size: 25px;
+     margin-left: 10px;
+     border: 1px solid #d8d8d8;
+     padding: 7px;
+     color: var(--color-primary);
+     font-size: 30px;
+  }
+ 
+  .grid-one .right >*{
+     margin-left: 10px;
+  }
+ 
+ .grid-one h3{
+    @include text-md();
+ }
+
+ .grid-one p{
+    @include text-sm();
+ }
+
+
+/* section 1 */
+
+.section-1{
+    /*background-image: url("https://www.keydesign-themes.com/etalon/dentist/wp-content/uploads/sites/16/2017/06/blog1.jpg");*/
+    background-image: linear-gradient(to right,#349bc4, #535e9f);
+    background-repeat: no-repeat; 
+    background-size: cover;
+    background-color: #1fb8b8;
+    height:600px;
+    width:100vw;
+    background-size: 100vw 1000px;
+    color: #fff;
+    
+  }
+  
+  .sect-1-content{
+   padding-left: 9rem; 
+  }
+  
+  .sect-1-header{
+    height: 300px;
+    width: 650px;
+    padding: 8rem 0;
+    
+   .left{
+
+    h2{
+        font-size: 3rem;
+        padding: 1.5rem 0 ;
+      }
+
+      .p-1{
+        @include text-md;
+      }
+
+      .p-2{
+        @include text-lg;
+        width: 450px;
+      }
+
+      .sect-1-buttons{
+        .btn{
+            margin-top: 1.5rem;
+            width: 10rem;
+            padding: .8rem 0;
+            background-color: #3f51b5;
+           
+        }
+        a{
+            color: var(--color-last);
+        }
+      }
+
+
+    }
+
+    .right{
+        background-image: url('');
+    }
+  }
+  
+.sect-1-buttons .btn{
+        width: 6rem;
+}
+
+  
+  
+/* section 2 */
+
+  .grid-two{
+    margin-top: 7rem;
+    text-align: center;
+    padding-bottom: 3rem;
+  }
+
+  .grid-two i{
+    font-size: 50px;
+    color: var(--color-primary);
+    margin-bottom: 2.5rem;
+  }
+
+
+  .grid-two h3{
+    @include text-lg();
+
+  }
+
+  .grid-two p{
+    @include text-sm();
+    margin-bottom: 3rem;
+  }
+
+
+/*banner*/
+
+
+.banner {
+    background-image: url("/images/dentalia-demo-bg-lights.jpg");
+   width: 100vw;
+   height: 9rem;
+   background-repeat: no-repeat;
+
+   
+ }
+ 
+ 
+.banner-cont{
+    padding: 4rem 0;
+    color: #fff;
+    display: flex;
+   justify-content:  space-between;
+   align-items: center;
+   margin: auto;
+   width: 75%;
+
+
+
+   p{
+    @include text-lg();
+   }
+}
+
+.banner-button{
+   
+    a{
+        display: flex;
+       
+    
+    p{
+        @include text-sm();
+        border: #fff solid 1px;
+    }
+
+    i{
+        
+        font-size: 25px;
+    }
+}
+}
+
+
+.banner-button a >*{
+    padding: .7rem;
+    border: #fff solid 1px;
+}
+
+ 
+ 
+/* section 3 */
+
+.section-3{
+  
+  @include auto();
+ @include pad-1();
+}
+
+.sect-3-img img{
+  margin:auto;
+  width: 500px;
+}
+
+.sect-3-img img{
+   height:420px;
+  width: 420px;
+  border-radius: 50%
+}
+
+.sect-3-txt{
+  width: 600px;
+
+  
+  .p-1{
+    @include text-lg();
+    color: var(--color-primary);
+  }
+
+   .p-2{
+    @include text-md();
+   }
+
+   .h3{
+    @include text-xl();
+   }
+   
+   .p-3{
+    @include text-md();
+   }
+}
+
+.sect-3-txt > *{
+  @include pad-2();
+}
+
+
+/*section 4*/
+
+/*section 5*/
+
+
+
+.sect-5-header{
+  @include text-center();
+  @include auto;
+
+
+  .p-1{
+    @include text-lg();
+    color: var(--color-primary);
+  }
+
+   .p-2{
+    @include text-xl();
+   }
+
+   
+   .p-3{
+    @include text-md();
+   }
+}
+
+.sect-5-header > *{
+  @include pad-2();
+}
+
+
+/*section 6*/
+.section-6{
+  @include auto;
+  width: 1400px;
+}
+.sect-6-img {
+  width: 50%;
+}
+
+.sect-6-img img{
+ height: 500px;
+}
+
+.grid-col-3{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+    align-items: center;
+    justify-content: space-between;
+}
+
+
+
+
+.sect-6-txt{
+  
+  .grid-main{
+    grid-template-columns: repeat(2, 1fr);
+    justify-items: center;
+    width: 500px;
+  }
+}
+
+
+
+
+
+/*Padding*/
+
+
+.pad-1{
+    padding: 2.5rem 0; 
+}
+
+.padding-1{
+    margin: 5rem 0;
+}
+
+
+
+/*Button*/
+.btn{
+    cursor: pointer;
+    background: none;
+    border: none;
+    padding: .5rem 1rem;
+    border-radius: 6%;
+    line-height: 1.2;
+    text-align: center;
+    text-decoration: none;
+}
+
+.btn-blue{
+    background-color: var(--color-primary);
+    color: var(--color-last)!important;
+  }
+
+
+
+
+
+
+ 
+ @media only screen and (max-width: 992px) {
+    .grid-main {
+      grid-template-columns:repeat(2, 1fr); ; 
+  }
+ } 
+ 
+ 
+ @media only screen and (max-width: 600px) {
+    .grid-main {
+      grid-template-columns:repeat(1, 1fr); ; 
+  }
+ }
+ 
+ 
+ @media only screen and (min-width: 600px) {
+   
+ }
+ 
+ 
+ @media only screen and (max-width: 768px) {
+  .grid-col-2 {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    gap: 1rem;
+   justify-content: center;   
+  }
+    
+    .section-3{
+    margin: auto;
+    width: 450px;
+  }
+    
+    .sect-3-txt{
+      text-align: center;
+    }
+ } 
